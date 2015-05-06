@@ -12,3 +12,8 @@ and broadcasting all the changes to users in the chatroom.
 It is an online file storage web service that provide fast cloud storage all over the world. It is used for storing all
 images taken and it's url is sent back so it could be part of the message that is sent to firebase
 
+##Snapshots
+Here are some snapshots of the app
+![Chatrooms](https://raw.githubusercontent.com/m090009/RealIMSample/master/Snapshots/device-2015-05-06-144227.png)
+![Chatroom music](https://raw.githubusercontent.com/m090009/RealIMSample/master/Snapshots/device-2015-05-06-150932.png)
+![Chat message with image](https://raw.githubusercontent.com/m090009/RealIMSample/master/Snapshots/device-2015-05-06-151603.png)
