@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">RealIM</string>
+
+    <string name="chatrooms_title">ChatRooms</string>
+    <string name="action_settings">Settings</string>
+    <string name="chatroom_defaultText">C</string>
+    <string name="add_chatroom_user_dialog_title">Add username</string>
+    <string name="add_chatroom_user_dialog_message">Whats your name ?</string>
+    <string name="add_chatroom_user_dialog_negativeButton">Dismiss</string>
+    <string name="add_chatroom_user_dialog_positiveButton">Confirm</string>
+    <string name="add_chatroom_user_dialog_editText_hint">Username</string>
+    <string name="userName_exists_warning">Username already exist, please try another name :)</string>
+    <string name="userName_created_message">Username successfully created</string>
+    <string name="chatrooms_progressDialog_message">Loading chatrooms</string>
+    <string name="noInternetConnection_message">No internet connection please connect to the internet</string>
+    <string name="noInternetConnection_title">No Internet</string>
+</resources>

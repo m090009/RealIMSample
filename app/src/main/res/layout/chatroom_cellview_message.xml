@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="30dp"
+    >
+
+    <TextView
+        android:id="@+id/message_title_TextView_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/chatroom_defaultText"
+        android:background="@drawable/message_username_rounded_background_left"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        style="@style/thinTextViewsStyle"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/message_card_view"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        >
+
+    <LinearLayout
+    android:id="@+id/message_bubble"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/message_imageView"
+                android:layout_width="@dimen/image_width"
+                android:layout_height="@dimen/image_height"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:placeholderImage="@color/wait_color"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:failureImage="@drawable/error"
+                fresco:failureImageScaleType="centerInside"
+                fresco:retryImage="@drawable/retrying"
+                fresco:retryImageScaleType="centerCrop"
+                    fresco:progressBarImage="@drawable/progress_bar"
+                fresco:progressBarImageScaleType="centerInside"
+                fresco:progressBarAutoRotateInterval="1000"
+                fresco:roundedCornerRadius="5dp"
+                fresco:roundBottomLeft="false"
+                fresco:roundBottomRight="false"
+                fresco:roundWithOverlayColor="@color/blue"
+                fresco:roundingBorderWidth="1dp"
+                fresco:roundingBorderColor="@color/red"/>
+
+            <TextView
+                android:id="@+id/message_body_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"/>
+</LinearLayout>
+        <!--<LinearLayout-->
+            <!--android:id="@+id/message_bubble"-->
+            <!--style="@style/myMessageStyle"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!-->-->
+
+        <!--</LinearLayout>-->
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/message_title_TextView_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/chatroom_defaultText"
+        android:textColor="@color/White"
+        android:background="@drawable/message_username_rounded_background_right"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        style="@style/thinTextViewsStyle"/>
+
+</LinearLayout>

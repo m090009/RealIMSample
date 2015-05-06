@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Blue_Light">#33B5E5</color>
+    <color name="Blue_Dark">#0099CC</color>
+    <color name="Violet_Light">#AA66CC</color>
+    <color name="Violet_Dark">#9933CC</color>
+    <color name="Green_Light">#99CC00</color>
+    <color name="Green_Dark">#669900</color>
+    <color name="Orange_Light">#FFBB33</color>
+    <color name="Orange_Dark">#FF8800</color>
+    <color name="Red_Light">#FF4444</color>
+    <color name="Red_Dark">#CC0000</color>
+    <color name="Black">#000000</color>
+    <color name="White">#ffffff</color>
+    <color name="OffWhite">#ffc9c9c9</color>
+    <color name="myMessage_textColor">@color/White</color>
+    
+</resources>

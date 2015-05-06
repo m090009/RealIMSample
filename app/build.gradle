@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "21.1.1"
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+
+
+
+    repositories {
+        mavenCentral()
+    }
+
+    defaultConfig {
+        applicationId "com.m090009.sample.realim"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    // Android L compat lib
+    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.firebase:firebase-client-android:2.2.3+'
+    // RecyclerView provided by Android
+    compile 'com.android.support:recyclerview-v7:21.0.0'
+    //Facebook
+    // Fresco
+    compile 'com.facebook.fresco:fresco:0.3.0+'
+    //Shimmer
+    //Future Libraries
+    //    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+//    compile 'com.facebook.shimmer:shimmer:0.1.0'
+    compile 'com.amazonaws:aws-android-sdk-core:2.1.+'
+    compile 'com.amazonaws:aws-android-sdk-s3:2.1.+'
+
+    compile 'com.android.support:cardview-v7:22.0.0'
+}

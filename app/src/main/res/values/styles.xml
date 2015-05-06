@@ -1,0 +1,51 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/Blue_Light</item>
+        <item name="colorPrimaryDark">@color/Blue_Dark</item>
+    </style>
+
+    <style name="toolbarTheme" parent="ThemeOverlay.AppCompat.Dark">
+
+    </style>
+
+    <style name="lightTextViewsStyle" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily" tools:ignore="NewApi">sans-serif-light</item>
+    </style>
+
+    <style name="myMessageStyle" parent="lightTextViewsStyle">
+        <item name="android:textColor">@color/myMessage_textColor</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:maxWidth">200dp</item>
+    </style>
+
+    <style name="messageFromMeStyle" parent="myMessageStyle">
+        <!--<item name="android:background">@drawable/message_rounded_background_fromme</item>-->
+        <item name="android:textColor">@color/White</item>
+    </style>
+
+    <style name="messageFromOthersStyle" parent="myMessageStyle">
+        <!--<item name="android:background">@drawable/message_rounded_background</item>-->
+        <item name="android:textColor">@color/Black</item>
+    </style>
+
+    <style name="thinTextViewsStyle" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily" tools:ignore="NewApi">sans-serif-thin</item>
+    </style>
+
+    <style name="mainTitleStyle" parent="lightTextViewsStyle">
+        <item name="android:textColor">@color/myMessage_textColor</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+</resources>
