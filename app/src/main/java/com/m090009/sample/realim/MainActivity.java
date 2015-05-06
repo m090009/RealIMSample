@@ -116,25 +116,12 @@ public class MainActivity extends FragmentActivity implements
         return mockDataList;
     }
 
-    public void mockAddChatRooms(){
-        ArrayList<ChatRoom> chatRooms = new ArrayList<>();
-        chatRooms.add(new ChatRoom("Movies"));
-        chatRooms.add(new ChatRoom("Tech"));
-        chatRooms.add(new ChatRoom("Sports"));
-        chatRooms.add(new ChatRoom("Politics"));
-        chatRooms.add(new ChatRoom("Music"));
-        chatRooms.add(new ChatRoom("Art"));
-        chatRooms.add(new ChatRoom("Business"));
-        for(ChatRoom cR : chatRooms)
-            this.firebase.addChatRoom(cR);
-    }
-
-
     public void makeFragmentWithDataSet(final ArrayList dataSet) {
-        final ChatRoomsFragment chatRoomsFragment = ChatRoomsFragment.newInstance(dataSet, this);
+        final ChatRoomsFragment chatRoomsFragment = ChatRoomsFragment.newInstance(dataSet,
+                this,
+                toolbarMiddleTitle);
         this.setProgressDialog(Dialogs.buildProgressDialog(this,
                 getString(R.string.chatrooms_progressDialog_message)));
-        setToolBarTitle("ChatRooms");
         this.firebase.getChatRooms(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -151,6 +138,7 @@ public class MainActivity extends FragmentActivity implements
             public void onCancelled(FirebaseError firebaseError) {
             }
         });
+        setToolBarTitle(chatRoomsFragment.getfName());
         addFragmentToView(chatRoomsFragment, chatRoomsFragment.getfName());
     }
 

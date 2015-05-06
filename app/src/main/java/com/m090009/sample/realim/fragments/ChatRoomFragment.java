@@ -63,6 +63,7 @@ public class ChatRoomFragment extends Fragment implements AfterImageTaken{
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         makeChatRoomAdapter(this.dataSet);
+        this.title.setText("Messages (0)");
     }
 
     @Nullable
@@ -86,7 +87,7 @@ public class ChatRoomFragment extends Fragment implements AfterImageTaken{
         if(message != null) {
 //            this.dataSet.add(message);
             this.adapter.addNewMessage(message);
-            this.title.setText("Messages ("+(this.adapter.getDataSet().size()-1)+")");
+            this.title.setText("Messages ("+(this.adapter.getDataSet().size())+")");
             ((LinearLayoutManager)this.mainListView.getLayoutManager()).
                     scrollToPositionWithOffset(this.adapter.getDataSet().size()-1, 0);
         }

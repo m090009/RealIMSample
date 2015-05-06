@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.m090009.sample.realim.adapters.ChatRoomsAdapter;
 import com.m090009.sample.realim.interfaces.OnAddUser;
@@ -27,12 +28,15 @@ public class ChatRoomsFragment extends Fragment implements OnAddUser{
     private String fName = "ChatRooms";
     private ChatRoomsFragmentInteraction callback;
     private ChatRoomsAdapter adapter;
+    private TextView toolbarTextView;
 
     public static ChatRoomsFragment newInstance(ArrayList<ChatRoom> list,
-                                                ChatRoomsFragmentInteraction callback){
+                                                ChatRoomsFragmentInteraction callback,
+                                                TextView textView){
         ChatRoomsFragment chatRoomsFragment = new ChatRoomsFragment();
         chatRoomsFragment.setChatRoomsDataSet(list);
         chatRoomsFragment.callback = callback;
+        chatRoomsFragment.setToolbarTextView(textView);
         return chatRoomsFragment;
     }
 
@@ -104,9 +108,18 @@ public class ChatRoomsFragment extends Fragment implements OnAddUser{
     @Override
     public boolean hasUserName(String username, int position) {
         boolean hasUsername = true;
-        if(!this.dataSet.get(position).getUsers().containsValue(username))
+        if(this.dataSet.get(position).getUsers()!= null) {
+            if (!this.dataSet.get(position).getUsers().containsValue(username))
+                hasUsername = false;
+        } else
             hasUsername = false;
         return hasUsername;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        this.getToolbarTextView().setText("("+this.dataSet.size()+")");
     }
 
     public String getfName() {
@@ -115,6 +128,14 @@ public class ChatRoomsFragment extends Fragment implements OnAddUser{
 
     public void setfName(String fName) {
         this.fName = fName;
+    }
+
+    public TextView getToolbarTextView() {
+        return toolbarTextView;
+    }
+
+    public void setToolbarTextView(TextView toolbarTextView) {
+        this.toolbarTextView = toolbarTextView;
     }
 
     public interface ChatRoomsFragmentInteraction {
